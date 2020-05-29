@@ -3,6 +3,8 @@ import cv2
 import os
 import sys
 
+# PMAC is een lib waar functies instaan die voor alle test scripts gebruikt kunnen worden
+# import de gene die je nodig hebt
 from PMAC import scale_img
 
 print("You are using OpenCV version " + cv2.__version__ + ".")
