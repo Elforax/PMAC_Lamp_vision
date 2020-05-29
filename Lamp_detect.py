@@ -3,6 +3,8 @@ import cv2
 import os
 import sys
 
+__all__ = [cv2]
+
 print("You are using OpenCV version " + cv2.__version__ + ".")
 
 if __name__ == "__main__":
@@ -21,6 +23,7 @@ if __name__ == "__main__":
     print(len(dataset))
     for i in range(0, len(dataset), 1):
         print(dataset[i])
-
+        cv2.imshow(dataset_path[i], dataset[i])
         pass
 
+    cv2.waitkey(0)
