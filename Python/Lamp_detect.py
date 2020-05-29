@@ -3,7 +3,15 @@ import cv2
 import os
 import sys
 
+from PMAC import scale_img
+
 print("You are using OpenCV version " + cv2.__version__ + ".")
 
 if __name__ == "__main__":
-    print("Hello")
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+    image = cv2.imread("pictures/lamp schoon.jpg")
+    image = scale_img(image, 0.2)
+
+    cv2.imshow("Original", image)
+    cv2.waitKey(0)
