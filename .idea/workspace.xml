@@ -1,13 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="67685f27-0e65-4cd0-859f-21b5c3eb8d19" name="Default Changelist" comment="">
+    <list default="true" id="28b2a66d-4d5d-4721-8f26-78bc2cd11fa5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0057.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0058.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0059.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0060.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0061.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/pictures/dirty/light dirty 1.JPG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/Lamp_detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lamp_detect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/PMAC.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/PMAC.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/clean/lamp schoon alt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/light 0% coverd.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/Python/pictures/ref/light 0% coverd.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/light 100% coverd.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/Python/pictures/ref/light 100% coverd.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/test_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/test_image.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,22 +41,19 @@
   </component>
   <component name="ProjectId" id="1cnkucex7r43aIM6gk5VF2bvQGr" />
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Python/pictures/dirty" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\jopte\Documents\GitHub\PMAC_Lamp_vision\Python\pictures\dirty" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\jopte\Documents\GitHub\PMAC_Lamp_vision\Python\pictures\ref" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.test_image">
     <configuration name="Lamp_detect" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PMAC_Lamp_vision" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -55,8 +75,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_image" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PMAC_Lamp_vision" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/test_image.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_image" />
         <item itemvalue="Python.Lamp_detect" />
       </list>
     </recent_temporary>
@@ -106,9 +148,32 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lamp detection full" />
     <option name="LAST_COMMIT_MESSAGE" value="Lamp detection full" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1899" height="295" key="GridCell.Tab.0.bottom" timestamp="1591186531279">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591186296971" />
+    <state width="1899" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531279" />
+    <state width="1899" height="295" key="GridCell.Tab.0.center" timestamp="1591186531278">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591186296971" />
+    <state width="1899" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531278" />
+    <state width="1899" height="295" key="GridCell.Tab.0.left" timestamp="1591186531278">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591186296971" />
+    <state width="1899" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531278" />
+    <state width="1899" height="295" key="GridCell.Tab.0.right" timestamp="1591186531278">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591186296971" />
+    <state width="1899" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531278" />
   </component>
 </project>
