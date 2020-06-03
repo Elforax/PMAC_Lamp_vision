@@ -5,25 +5,33 @@ import sys
 
 # PMAC is een lib waar functies instaan die voor alle test scripts gebruikt kunnen worden
 # import de gene die je nodig hebt
-from PMAC import scale_img, image_set
+from PMAC import scale_img, image_paths, image_get, img_show_all, get_contours
 
 print("You are using OpenCV version " + cv2.__version__ + ".")
 
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-    paths, names = image_set("pictures")
+    paths, names = image_paths("pictures/clean")
     print(paths, names)
+    images = image_get(paths)
 
-    images = []
-    for i in range(0, len(paths), 1):
-        input_img = cv2.imread(paths[i])
-        input_img = scale_img(input_img, 0.2)
-        images.append(input_img)
+    # processing here #
+    for i in range(0, len(images), 1):
+        k = (7, 7)
+        image = images[i]
+        grey = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        blur = cv2.GaussianBlur(grey, k, 2.0, 2.0)
+        edge = cv2.Canny(blur, 10, 50)
+        thicc = cv2.dilate(edge, (3, 3))
+        mask = get_contours(image, thicc, 80000, 250000)
+        lamp_only = cv2.bitwise_and(image, mask)
 
-    i = 0
-    for image in images:
-        cv2.imshow(names[i], image)
-        i += 1
+        erode = cv2.erode(edge, (3, 3))
+        cv2.imshow("blur", image)
+        cv2.imshow("edge", mask)
+        cv2.imshow("lamp_only", lamp_only)
+        cv2.waitKey(0)
 
-    cv2.waitKey(0)
+    # end proces
+    #img_show_all(images, names)
