@@ -12,27 +12,32 @@ def scale_img(img, scale=1.0):
     _scale_v = round(len(img) * scale)
     _scale_u = round(len(img[0]) * scale)
 
-    print(_scale_u, "x", _scale_v)
+    # print(_scale_u, "x", _scale_v)
     _img = cv2.resize(img, (_scale_u, _scale_v))
     return _img
 
 
 def get_contours(img, edge, rangeMin, rangeMax):
     contours, hierarchy = cv2.findContours(edge, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+    mask = np.zeros_like(img)
 
     for i in range(0, len(contours), 1):
         area = cv2.contourArea(contours[i])
-        print(area)
-        mask = np.zeros_like(img)
+        peri = cv2.arcLength(contours[i], True)
+        # print(peri, area)
+        # cv2.drawContours(img, contours[i], -1, (0, 0, 255), 2)
+
         if rangeMin < area < rangeMax:
             cv2.fillPoly(mask, pts=[contours[i]], color=(255, 255, 255))
-
-            mask = cv2.erode(mask, (7, 7))
-
             offset = 10
             x, y, w, h = cv2.boundingRect(contours[i])
             cv2.rectangle(img, (x-offset, y-offset), (x + w + offset, y + h + offset), (0, 255, 0), 2)
-            return mask
+    kernel = np.ones([7, 7], np.uint8)
+
+    mask = cv2.erode(mask, kernel, iterations=5)
+    mask = cv2.dilate(mask, kernel, iterations=2)
+
+    return mask
 
 
 def image_paths(path, file_type="jpg"):    # points to a folder and takes all the images in it.
@@ -57,6 +62,7 @@ def image_get(paths):
         _input_img = scale_img(_input_img, 0.2)
         _images.append(_input_img)
     return _images
+
 
 def img_show_all(img, names):
     i = 0
@@ -97,3 +103,17 @@ def stack_images(scale, imgArray):
         hor= np.hstack(imgArray)
         ver = hor
     return ver
+
+
+def pixel_count(img, min_level=0, max_level=255):
+    pixels = 0
+    for v in img:
+        for u in v:
+            if isinstance(u, int):
+                if u > 0:
+                    pixels += 1
+            else:
+                if u.any() > 0:
+                    pixels += 1
+
+    return pixels
