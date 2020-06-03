@@ -39,7 +39,6 @@ if __name__ == "__main__":
 
         thicc = cv2.dilate(edge, kernel)
 
-        cv2.imshow("thicc", thicc)
         mask = get_contours(image, thicc, thhold[0], thhold[1])
 
         lamp_only = np.zeros_like(image)
