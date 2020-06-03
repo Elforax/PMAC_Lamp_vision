@@ -12,7 +12,7 @@ def scale_img(img, scale=1.0):
     _scale_v = round(len(img) * scale)
     _scale_u = round(len(img[0]) * scale)
 
-    print(_scale_u, "x", _scale_v)
+    # print(_scale_u, "x", _scale_v)
     _img = cv2.resize(img, (_scale_u, _scale_v))
     return _img
 
@@ -24,7 +24,7 @@ def get_contours(img, edge, rangeMin, rangeMax):
     for i in range(0, len(contours), 1):
         area = cv2.contourArea(contours[i])
         peri = cv2.arcLength(contours[i], True)
-        print(peri, area)
+        # print(peri, area)
         # cv2.drawContours(img, contours[i], -1, (0, 0, 255), 2)
 
         if rangeMin < area < rangeMax:
@@ -62,6 +62,7 @@ def image_get(paths):
         _input_img = scale_img(_input_img, 0.2)
         _images.append(_input_img)
     return _images
+
 
 def img_show_all(img, names):
     i = 0
@@ -102,3 +103,17 @@ def stack_images(scale, imgArray):
         hor= np.hstack(imgArray)
         ver = hor
     return ver
+
+
+def pixel_count(img, min_level=0, max_level=255):
+    pixels = 0
+    for v in img:
+        for u in v:
+            if isinstance(u, int):
+                if u > 0:
+                    pixels += 1
+            else:
+                if u.any() > 0:
+                    pixels += 1
+
+    return pixels

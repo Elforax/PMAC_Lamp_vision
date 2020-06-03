@@ -5,7 +5,7 @@ import sys
 
 # PMAC is een lib waar functies instaan die voor alle test scripts gebruikt kunnen worden
 # import de gene die je nodig hebt
-from PMAC import scale_img, image_paths, image_get, img_show_all, get_contours, stack_images
+from PMAC import scale_img, image_paths, image_get, img_show_all, get_contours, stack_images, pixel_count
 
 print("You are using OpenCV version " + cv2.__version__ + ".")
 
@@ -35,17 +35,21 @@ if __name__ == "__main__":
         erode = cv2.erode(edge, (3, 3))
 
         kernel = np.array([[0, 1, 0], [1, 1, 1], [0, 1, 0]], np.uint8)
-        print(kernel)
+        # print(kernel)
 
         thicc = cv2.dilate(edge, kernel)
 
         mask = get_contours(image, thicc, thhold[0], thhold[1])
 
+        pixels = pixel_count(mask)
+        print(pixels)
+
         lamp_only = np.zeros_like(image)
-        total = np.sum(mask)
-        if not total == None:
+        if pixels > 50000:
+            print("Lamp found")
             lamp_only = cv2.bitwise_and(image, mask)
         else:
+            print("No Lamp found")
             mask = np.ones_like(image)
 
         stack = stack_images(0.5, [[image, edge], [mask, lamp_only]])
