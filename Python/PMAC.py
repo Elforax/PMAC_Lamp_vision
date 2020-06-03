@@ -64,13 +64,14 @@ def image_get(paths):
     return _images
 
 
-def img_show_all(img, names):
+def img_show_all(img, names, destroy=True):
     i = 0
     for image in img:
         cv2.imshow(names[i], image)
         i += 1
     cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    if destroy:
+        cv2.destroyAllWindows()
 
 
 def stack_images(scale, imgArray):

@@ -6,54 +6,66 @@ import sys
 # PMAC is een lib waar functies instaan die voor alle test scripts gebruikt kunnen worden
 # import de gene die je nodig hebt
 from PMAC import scale_img, image_paths, image_get, img_show_all, get_contours, stack_images, pixel_count
-
 print("You are using OpenCV version " + cv2.__version__ + ".")
 
+
+# looks for a lamp in the image and returns a cut version of the origional image if found else the return is blank
+def find_lamp(image, thhold=None, thcanny=None, k=(7, 7), stk_scale=0.5):
+    if thcanny is None:
+        thcanny = [5, 70]
+    if thhold is None:
+        thhold = [20000, 250000]
+
+    grey = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)                      # makes a grayscale version of the input
+    blur = cv2.GaussianBlur(grey, k, 2.0, 2.0)                          # blurs the grayscale to reduce noise
+    edge = cv2.Canny(blur, thcanny[0], thcanny[1])                      # detects edges of the blurred image
+
+    kernel = np.array([[0, 1, 0], [1, 1, 1], [0, 1, 0]], np.uint8)      # creates a star kernel
+
+    thicc = cv2.dilate(edge, kernel)                                    # dilates the edges
+    mask = get_contours(blur, thicc, thhold[0], thhold[1])              # creates a mask of the filled contour
+
+    # creates blank images to fill
+    pixels = pixel_count(mask)
+    _lamp = np.zeros_like(blur)
+    _result_image = np.zeros_like(image)
+    mask2 = np.zeros_like(image)
+
+    # if lamp is found preform this
+    if pixels > 50000:
+        _lamp = cv2.bitwise_and(blur, mask)                         # mask blur image for second check
+        mask2 = get_contours(image, _lamp, thhold[0], thhold[1])    # second contour check to find the real lamp
+        _result_image = cv2.bitwise_and(image, mask2)               # mask the result over the input image
+
+    _stack = stack_images(stk_scale, [[image, edge], [_lamp, mask2]])   # create a image of multiple images
+
+    return _result_image, _stack
+
+
 if __name__ == "__main__":
-    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))            # sets dir to current dir
 
-    thhold = [20000, 250000]
-    thcanny = [5, 70]
-    print(thhold)
-
-    paths, names = image_paths("pictures/clean")
+    paths, names = image_paths("pictures/clean")                    # gets all image paths and names
     paths2, names2 = image_paths("pictures/dirty")
-    print(paths, names)
     for path in paths2:
-        paths.append(path)
+        paths.append(path)                                           # appends one list to the other
+
+    print(paths)
 
     images = image_get(paths)
 
     # processing here #
+    results = []
     for i in range(0, len(images), 1):
         print("New image")
-        k = (7, 7)
-        image = images[i]
-        grey = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        blur = cv2.GaussianBlur(grey, k, 2.0, 2.0)
-        edge = cv2.Canny(blur, thcanny[0], thcanny[1])
-        erode = cv2.erode(edge, (3, 3))
 
-        kernel = np.array([[0, 1, 0], [1, 1, 1], [0, 1, 0]], np.uint8)
-        # print(kernel)
-
-        thicc = cv2.dilate(edge, kernel)
-
-        mask = get_contours(blur, thicc, thhold[0], thhold[1])
-
-        pixels = pixel_count(mask)
-        lamp_only = np.zeros_like(blur)
-        result_image = np.zeros_like(image)
-        if pixels > 50000:
-            print("Lamp found")
-            lamp_only = cv2.bitwise_and(blur, mask)
-            mask2 = get_contours(image, lamp_only, thhold[0], thhold[1])
-            result_image = cv2.bitwise_and(image, mask2)
+        result, stack = find_lamp(images[i])
+        if result.any():
+            print("Found a lamp")
         else:
-            print("No Lamp found")
-
-        stack = stack_images(0.5, [[image, edge], [result_image, lamp_only]])
-        cv2.imshow("Image Set", stack)
-        cv2.waitKey(0)
+            print("Found a no lamp")
     # end proces
-    #img_show_all(images, names)
+
+        results = [result, stack]
+        img_show_all(results, ["Result", "Process Results"], False)
+    cv2.destroyAllWindows()
