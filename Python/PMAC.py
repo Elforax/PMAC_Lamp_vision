@@ -105,7 +105,7 @@ def stack_images(scale, imgArray):
     return ver
 
 
-def pixel_count(img, min_level=0, max_level=255):
+def pixel_count(img):
     pixels = 0
     for v in img:
         for u in v:
@@ -117,3 +117,4 @@ def pixel_count(img, min_level=0, max_level=255):
                     pixels += 1
 
     return pixels
+

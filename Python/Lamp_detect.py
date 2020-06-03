@@ -39,20 +39,20 @@ if __name__ == "__main__":
 
         thicc = cv2.dilate(edge, kernel)
 
-        mask = get_contours(image, thicc, thhold[0], thhold[1])
+        mask = get_contours(blur, thicc, thhold[0], thhold[1])
 
         pixels = pixel_count(mask)
-        print(pixels)
-
-        lamp_only = np.zeros_like(image)
+        lamp_only = np.zeros_like(blur)
+        result_image = np.zeros_like(image)
         if pixels > 50000:
             print("Lamp found")
-            lamp_only = cv2.bitwise_and(image, mask)
+            lamp_only = cv2.bitwise_and(blur, mask)
+            mask2 = get_contours(image, lamp_only, thhold[0], thhold[1])
+            result_image = cv2.bitwise_and(image, mask2)
         else:
             print("No Lamp found")
-            mask = np.ones_like(image)
 
-        stack = stack_images(0.5, [[image, edge], [mask, lamp_only]])
+        stack = stack_images(0.5, [[image, edge], [result_image, lamp_only]])
         cv2.imshow("Image Set", stack)
         cv2.waitKey(0)
     # end proces
