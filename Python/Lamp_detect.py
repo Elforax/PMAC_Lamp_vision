@@ -28,8 +28,10 @@ if __name__ == "__main__":
         lamp_only = cv2.bitwise_and(image, mask)
 
         erode = cv2.erode(edge, (3, 3))
-        cv2.imshow("blur", image)
-        cv2.imshow("edge", mask)
+        cv2.imshow("Original", image)
+        cv2.imshow("blur", blur)
+        cv2.imshow("edge", edge)
+        cv2.imshow("mask", mask)
         cv2.imshow("lamp_only", lamp_only)
         cv2.waitKey(0)
 

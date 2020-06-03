@@ -21,16 +21,14 @@ def get_contours(img, edge, rangeMin, rangeMax):
     contours, hierarchy = cv2.findContours(edge, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
 
     for i in range(0, len(contours), 1):
-        color_set = (0, 0, 255)
         area = cv2.contourArea(contours[i])
-        print(area)
         mask = np.zeros_like(img)
         if rangeMin < area < rangeMax:
             cv2.fillPoly(mask, pts=[contours[i]], color=(255, 255, 255))
 
             offset = 10
             x, y, w, h = cv2.boundingRect(contours[i])
-            img = cv2.rectangle(img, (x-offset, y-offset), (x + w + offset, y + h + offset), (0, 255, 0), 2)
+            cv2.rectangle(img, (x-offset, y-offset), (x + w + offset, y + h + offset), (0, 255, 0), 2)
             return mask
 
 

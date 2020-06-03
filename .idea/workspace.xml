@@ -71,6 +71,14 @@
       <option name="presentableId" value="Default" />
       <updated>1591171968607</updated>
     </task>
+    <task id="LOCAL-00001" summary="Lamp detection full">
+      <created>1591178457472</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591178457472</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -83,5 +91,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Lamp detection full" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lamp detection full" />
   </component>
 </project>
