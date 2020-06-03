@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b2a66d-4d5d-4721-8f26-78bc2cd11fa5" name="Default Changelist" comment="" />
+    <list default="true" id="28b2a66d-4d5d-4721-8f26-78bc2cd11fa5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +31,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1cnkucex7r43aIM6gk5VF2bvQGr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Python/pictures/dirty" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -41,18 +49,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Users\jopte\Documents\GitHub\PMAC_Lamp_vision\Python\pictures\ref" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.Lamp_detect">
     <configuration name="Lamp_detect" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -109,7 +105,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="67685f27-0e65-4cd0-859f-21b5c3eb8d19" name="Default Changelist" comment="" />
+      <changelist id="28b2a66d-4d5d-4721-8f26-78bc2cd11fa5" name="Default Changelist" comment="" />
       <created>1591171968607</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -172,38 +168,37 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lamp detection full" />
     <option name="LAST_COMMIT_MESSAGE" value="Lamp detection full" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="295" key="GridCell.Tab.0.bottom" timestamp="1591186531279">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1899" height="295" key="GridCell.Tab.0.bottom" timestamp="1591219204071">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591186296971" />
+    <state width="1899" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591219204071" />
     <state width="1899" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531279" />
-    <state width="1899" height="295" key="GridCell.Tab.0.center" timestamp="1591186531278">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1899" height="295" key="GridCell.Tab.0.center" timestamp="1591219204071">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591186296971" />
+    <state width="1899" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591219204071" />
     <state width="1899" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531278" />
-    <state width="1899" height="295" key="GridCell.Tab.0.left" timestamp="1591186531278">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1899" height="295" key="GridCell.Tab.0.left" timestamp="1591219204071">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591186296971" />
+    <state width="1899" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591219204071" />
     <state width="1899" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531278" />
-    <state width="1899" height="295" key="GridCell.Tab.0.right" timestamp="1591186531278">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1899" height="295" key="GridCell.Tab.0.right" timestamp="1591219204071">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591186296971" />
+    <state width="1899" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591219204071" />
     <state width="1899" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531278" />
   </component>
 </project>
