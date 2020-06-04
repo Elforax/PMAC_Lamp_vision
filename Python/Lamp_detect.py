@@ -30,16 +30,19 @@ def find_lamp(image, thhold=None, thcanny=None, k=(7, 7), stk_scale=0.5):
     _lamp = np.zeros_like(blur)
     _result_image = np.zeros_like(image)
     mask2 = np.zeros_like(image)
+    _area = 0
 
     # if lamp is found preform this
     if pixels > 50000:
         _lamp = cv2.bitwise_and(blur, mask)                         # mask blur image for second check
         mask2 = get_contours(image, _lamp, thhold[0], thhold[1])    # second contour check to find the real lamp
         _result_image = cv2.bitwise_and(image, mask2)               # mask the result over the input image
+        if _result_image.any():
+            _area = pixel_count(_result_image)
 
     _stack = stack_images(stk_scale, [[image, edge], [_lamp, mask2]])   # create a image of multiple images
 
-    return _result_image, _stack
+    return _result_image, _area, _stack
 
 
 if __name__ == "__main__":
@@ -59,8 +62,9 @@ if __name__ == "__main__":
     for i in range(0, len(images), 1):
         print("New image")
 
-        result, stack = find_lamp(images[i])
-        if result.any():
+        result, area, stack = find_lamp(images[i])
+        print(area)
+        if area > 0:
             print("Found a lamp")
         else:
             print("Found a no lamp")
