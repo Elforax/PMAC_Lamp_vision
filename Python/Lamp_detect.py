@@ -14,7 +14,7 @@ def find_lamp(image, thhold=None, thcanny=None, k=(9, 9), stk_scale=0.5):
     if thcanny is None:
         thcanny = [5, 70]
     if thhold is None:
-        thhold = [20000, 250000]
+        thhold = [20000, 270000]
 
     grey = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)                      # makes a grayscale version of the input
     blur = cv2.GaussianBlur(grey, k, 2.0, 2.0)                          # blurs the grayscale to reduce noise
@@ -23,7 +23,7 @@ def find_lamp(image, thhold=None, thcanny=None, k=(9, 9), stk_scale=0.5):
 
     kernel = np.array([[0, 1, 0], [1, 1, 1], [0, 1, 0]], np.uint8)      # creates a star kernel
 
-    thicc = cv2.dilate(edge, kernel)                                    # dilates the edges
+    thicc = cv2.dilate(edge, kernel, iterations=4)                                    # dilates the edges
 
     cv2.imshow("Mask thicc", thicc)
     mask = get_contours(blur, thicc, thhold[0], thhold[1])              # creates a mask of the filled contour
