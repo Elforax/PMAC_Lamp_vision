@@ -24,7 +24,7 @@ def get_contours(img, edge, rangeMin, rangeMax):
     for i in range(0, len(contours), 1):
         area = cv2.contourArea(contours[i])
         peri = cv2.arcLength(contours[i], True)
-        print(area)
+        # print(area)
         cv2.drawContours(img, contours[i], -1, (0, 0, 255), 2)
 
         if rangeMin < area < rangeMax:

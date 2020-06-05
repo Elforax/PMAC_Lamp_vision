@@ -14,3 +14,20 @@ if __name__ == "__main__":
         paths.append(path)  # appends one list to the other
 
     print(paths)
+
+    # processing here #
+    results = []
+    for path in paths:
+        image = cv2.imread(path)
+        image = scale_img(image, 0.2)
+        print("New lamp")
+        result, area, stack = find_lamp(image)
+
+        print(area)
+        cv2.imshow("Result", result)
+
+
+
+
+        cv2.waitKey(0)
+    cv2.destroyAllWindows()
