@@ -60,7 +60,7 @@
       <recent name="D:\Users\jopte\Documents\GitHub\PMAC_Lamp_vision\Python\pictures\dirty" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_image">
+  <component name="RunManager" selected="Python.Lamp_detect">
     <configuration name="Lamp_detect" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PMAC_Lamp_vision" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,8 +105,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_image" />
         <item itemvalue="Python.Lamp_detect" />
+        <item itemvalue="Python.test_image" />
       </list>
     </recent_temporary>
   </component>
