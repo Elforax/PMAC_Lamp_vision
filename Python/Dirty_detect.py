@@ -9,6 +9,12 @@ if __name__ == "__main__":
     os.chdir(os.path.dirname(os.path.abspath(__file__)))  # sets dir to current dir
 
     paths, names = image_paths("pictures/dirty")  # gets all image paths and names
+    paths2, names2 = image_paths("pictures/dirty_alt")
+    for path in paths2:
+        paths.append(path)  # appends one list to the other
+
+    for name in names2:
+        names.append(name)  # appends one list to the other
     print(paths)
 
     # processing here #
@@ -47,7 +53,6 @@ if __name__ == "__main__":
         inv_mask_hsv = cv2.bitwise_not(mask_hsv)
         inv_mask_hsv = cv2.bitwise_and(inv_mask_hsv, mask)
         inv_mask_hsv = cv2.erode(inv_mask_hsv, kernel_star, iterations=1)
-        cv2.imshow("hsv", mask_hsv)
 
         # mean image mask   (Finds deltas from the mean of the grayscale)
         mean = np.mean(gray)
@@ -86,7 +91,7 @@ if __name__ == "__main__":
 
         print(area, dirty_pixels)
         print(str(names[index]),": ",dirtiness, "%")
-        stack = stack_images(0.5, [[result, gray, noise, invert], [dirtiness_results, dirty_zone, noise_mask, invert_edge_dilate]])
+        stack = stack_images(0.4, [[result, gray, hsv], [dirtiness_results, dirty_zone, inv_mask_hsv], [noise, invert, mask_led_border],[noise_mask, invert_edge_dilate, inv_mask_leds]])
         cv2.imshow("Results", stack)
 
         cv2.waitKey(0)
