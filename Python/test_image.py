@@ -9,6 +9,18 @@ from PMAC import scale_img, image_paths
 
 print("You are using OpenCV version " + cv2.__version__ + ".")
 
+#debug config
+debug_clean = 0
+debug_dirty = 0
+debug_clean_alt = 0
+debug_dirty_alt = 0
+
+#run debug
+clean = 1
+dirty = 1
+clean_alt = 1
+dirty_alt = 1
+
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
@@ -16,55 +28,113 @@ if __name__ == "__main__":
     print(paths_ref, names_ref)
     paths, names = image_paths("pictures/dirty")
     print(paths, names)
+    paths_ref_alt, names_ref_alt = image_paths("pictures/ref_alt")
+    print(paths_ref_alt, names_ref_alt)
+    paths_alt, names_alt = image_paths("pictures/dirty_alt")
+    print(paths_alt, names_alt)
 
 #refrance data
-    images_ref = []
-    for i in range(0, len(paths_ref), 1):
-        input_img_ref = cv2.imread(paths_ref[i])
-        input_img_ref = scale_img(input_img_ref, 0.2)
-        images_ref.append(input_img_ref)
+    if clean:
+        images_ref = []
+        for i in range(0, len(paths_ref), 1):
+            input_img_ref = cv2.imread(paths_ref[i])
+            input_img_ref = scale_img(input_img_ref, 0.2)
+            images_ref.append(input_img_ref)
 
-    hsv_image = cv2.cvtColor(images_ref[1], cv2.COLOR_BGR2HSV)
+        hsv_image = cv2.cvtColor(images_ref[1], cv2.COLOR_BGR2HSV)
 
-    lowerb_c = np.array([60, 50, 50])
-    upperb_c = np.array([61, 255, 255])
-    mask_clean = cv2.inRange(hsv_image, lowerb_c, upperb_c)
-    opp_total = cv2.countNonZero(mask_clean)
+        lowerb_c = np.array([60, 50, 50])
+        upperb_c = np.array([61, 255, 255])
+        mask_clean = cv2.inRange(hsv_image, lowerb_c, upperb_c)
+        opp_total = cv2.countNonZero(mask_clean)
 
-    lamp_only_clean = cv2.bitwise_and(images_ref[0], images_ref[0], mask= mask_clean)
+        lamp_only_clean = cv2.bitwise_and(images_ref[0], images_ref[0], mask= mask_clean)
+
+        if debug_clean:
+            print(opp_total)
+            cv2.imshow("mask clean", mask_clean)
+            cv2.imshow("lamp only clean", lamp_only_clean)
+
+#refrance data alt
+
+    if clean_alt:
+        images_ref_alt = []
+        for i in range(0, len(paths_ref), 1):
+            input_img_ref_alt = cv2.imread(paths_ref_alt[i])
+            input_img_ref_alt = scale_img(input_img_ref_alt, 0.2)
+            images_ref_alt.append(input_img_ref_alt)
+
+        hsv_image_alt = cv2.cvtColor(images_ref_alt[0], cv2.COLOR_BGR2HSV)
+
+        lowerb_c_alt = np.array([60, 50, 50])
+        upperb_c_alt = np.array([61, 255, 255])
+        mask_clean_alt = cv2.inRange(hsv_image_alt, lowerb_c_alt, upperb_c_alt)
+        opp_total_alt = cv2.countNonZero(mask_clean_alt)
+
+        lamp_only_clean_alt = cv2.bitwise_and(images_ref_alt[1], images_ref_alt[1], mask= mask_clean_alt)
+
+        if debug_clean_alt:
+            print(opp_total_alt)
+            cv2.imshow("lamp clean", input_img_ref_alt)
+            cv2.imshow("mask clean_alt", mask_clean_alt)
+            cv2.imshow("lamp only clean_alt", lamp_only_clean_alt)
 
 #dirt data
-    images = []
-    for i in range(0, len(paths), 1):
-        input_img = cv2.imread(paths[i])
-        input_img = scale_img(input_img, 0.2)
-        images.append(input_img)
+    print("pictures")
+    if dirty:
+        images = []
+        for i in range(0, len(paths), 1):
+            input_img = cv2.imread(paths[i])
+            input_img = scale_img(input_img, 0.2)
+            images.append(input_img)
 
-        lamp_only_dirty = cv2.bitwise_and(images[i], images[i], mask= mask_clean)
-        dirt_only = cv2.bitwise_xor(lamp_only_clean, lamp_only_dirty)
+            lamp_only_dirty = cv2.bitwise_and(images[i], images[i], mask= mask_clean)
+            dirt_only = cv2.bitwise_xor(lamp_only_clean, lamp_only_dirty)
 
-        hsv_dirt = cv2.cvtColor(dirt_only, cv2.COLOR_BGR2HSV)
+            hsv_dirt = cv2.cvtColor(dirt_only, cv2.COLOR_BGR2HSV)
 
-        lowerb_d = np.array([0, 0, 0])
-        upperb_d = np.array([180, 255, 255])
-        mask_dirt = cv2.inRange(hsv_dirt, lowerb_d, lowerb_d)
-        mask_dirt = cv2.bitwise_not(mask_dirt)
-        opp_dirt = cv2.countNonZero(mask_dirt)
+            lowerb_d = np.array([0, 0, 0])
+            upperb_d = np.array([180, 255, 255])
+            mask_dirt = cv2.inRange(hsv_dirt, lowerb_d, lowerb_d)
+            mask_dirt = cv2.bitwise_not(mask_dirt)
+            opp_dirt = cv2.countNonZero(mask_dirt)
 
-        print(names[i], opp_dirt/opp_total*100)
+            print(names[i], opp_dirt/opp_total*100)
 
-    if 0:
-        print(opp_dirt)
-        print(opp_total)
-        cv2.imshow("mask clean", mask_clean)
-        cv2.imshow("hsv dirt", hsv_dirt)
-        cv2.imshow("mask dirt", mask_dirt)
-        cv2.imshow("lamp only dirty", lamp_only_dirty)
-        cv2.imshow("lamp only clean", lamp_only_clean)
+            if debug_dirty:
+                print(opp_dirt)
+                cv2.imshow("hsv dirt", hsv_dirt)
+                cv2.imshow("lamp only dirty", lamp_only_dirty)
+                cv2.imshow("mask dirt", mask_dirt)
 
-        i = 0
-        for image in images:
-            cv2.imshow(names[i], image)
-            i += 1
+
+#dirty data alt
+    print("pictures alt")
+    if dirty_alt:
+        images_alt = []
+        for i in range(0, len(paths_alt), 1):
+            input_img_alt = cv2.imread(paths_alt[i])
+            input_img_alt = scale_img(input_img_alt, 0.2)
+            images_alt.append(input_img_alt)
+
+            lamp_only_dirty_alt = cv2.bitwise_and(images_alt[i], images_alt[i], mask=mask_clean_alt)
+            dirt_only_alt = cv2.bitwise_xor(lamp_only_clean_alt, lamp_only_dirty_alt)
+
+            hsv_dirt_alt = cv2.cvtColor(dirt_only_alt, cv2.COLOR_BGR2HSV)
+
+            lowerb_d_alt = np.array([0, 0, 0])
+            upperb_d_alt = np.array([180, 255, 255])
+            mask_dirt_alt = cv2.inRange(hsv_dirt_alt, lowerb_d_alt, lowerb_d_alt)
+            mask_dirt_alt = cv2.bitwise_not(mask_dirt_alt)
+            opp_dirt_alt = cv2.countNonZero(mask_dirt_alt)
+
+            print(names_alt[i], opp_dirt_alt / opp_total_alt * 100)
+
+            if debug_dirty_alt:
+                print(opp_dirt_alt)
+                cv2.imshow("hsv dirt", hsv_dirt_alt)
+                cv2.imshow("Lamp only clean", lamp_only_clean_alt)
+                cv2.imshow("lamp only dirty", lamp_only_dirty_alt)
+                cv2.imshow("mask dirt", mask_dirt_alt)
 
     cv2.waitKey(0)
