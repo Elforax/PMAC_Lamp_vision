@@ -10,7 +10,7 @@ print("You are using OpenCV version " + cv2.__version__ + ".")
 
 
 # looks for a lamp in the image and returns a cut version of the origional image if found else the return is blank
-def find_lamp(image, thhold=None, thcanny=None, k=(7, 7), stk_scale=0.5):
+def find_lamp(image, thhold=None, thcanny=None, k=(9, 9), stk_scale=0.5):
     if thcanny is None:
         thcanny = [5, 70]
     if thhold is None:
@@ -18,11 +18,14 @@ def find_lamp(image, thhold=None, thcanny=None, k=(7, 7), stk_scale=0.5):
 
     grey = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)                      # makes a grayscale version of the input
     blur = cv2.GaussianBlur(grey, k, 2.0, 2.0)                          # blurs the grayscale to reduce noise
-    edge = cv2.Canny(blur, thcanny[0], thcanny[1])                      # detects edges of the blurred image
+    cv2.imshow("blur", blur)
+    edge = cv2.Canny(blur, thcanny[0], thcanny[1],)                      # detects edges of the blurred image
 
     kernel = np.array([[0, 1, 0], [1, 1, 1], [0, 1, 0]], np.uint8)      # creates a star kernel
 
     thicc = cv2.dilate(edge, kernel)                                    # dilates the edges
+
+    cv2.imshow("Mask thicc", thicc)
     mask = get_contours(blur, thicc, thhold[0], thhold[1])              # creates a mask of the filled contour
 
     # creates blank images to fill
@@ -33,7 +36,7 @@ def find_lamp(image, thhold=None, thcanny=None, k=(7, 7), stk_scale=0.5):
     _area = 0
 
     # if lamp is found preform this
-    if pixels > 50000:
+    if pixels > 70000:
         _lamp = cv2.bitwise_and(blur, mask)                         # mask blur image for second check
         mask2 = get_contours(image, _lamp, thhold[0], thhold[1])    # second contour check to find the real lamp
         _result_image = cv2.bitwise_and(image, mask2)               # mask the result over the input image
