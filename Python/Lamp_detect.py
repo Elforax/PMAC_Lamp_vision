@@ -5,7 +5,7 @@ import sys
 
 # PMAC is een lib waar functies instaan die voor alle test scripts gebruikt kunnen worden
 # import de gene die je nodig hebt
-from PMAC import scale_img, image_paths, image_get, img_show_all, get_contours, stack_images, pixel_count
+from Python.PMAC import *
 print("You are using OpenCV version " + cv2.__version__ + ".")
 
 
