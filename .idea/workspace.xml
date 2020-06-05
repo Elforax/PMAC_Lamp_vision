@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b2a66d-4d5d-4721-8f26-78bc2cd11fa5" name="Default Changelist" comment="" />
+    <list default="true" id="28b2a66d-4d5d-4721-8f26-78bc2cd11fa5" name="Default Changelist" comment="added new pictures">
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0078.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0079.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0080.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0081.JPG" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,18 +59,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Users\jopte\Documents\GitHub\PMAC_Lamp_vision\Python\pictures\dirty" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.test_image">
     <configuration name="Lamp_detect" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -213,13 +206,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lamp detection full" />
