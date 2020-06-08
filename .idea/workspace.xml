@@ -19,41 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b2a66d-4d5d-4721-8f26-78bc2cd11fa5" name="Default Changelist" comment="">
+    <list default="true" id="28b2a66d-4d5d-4721-8f26-78bc2cd11fa5" name="Default Changelist" comment="chanced pictures to PNG for better qualaty">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/Dirty_detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Dirty_detect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0057.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0058.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0059.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0060.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0062.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0064.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0065.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0066.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0067.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0068.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0069.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0070.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0071.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0072.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0073.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0074.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0075.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0076.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0077.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0082.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0083.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0084.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0085.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0086.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/light dirty 1.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/light dirty.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty_alt/IMG_0090.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/ref/light 0% coverd.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/ref/light 100% coverd.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/ref_alt/IMG_0088.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/pictures/ref_alt/IMG_0089.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/test_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/test_image.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +218,21 @@
       <option name="project" value="LOCAL" />
       <updated>1591350722205</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="chanced pictures to PNG for better qualaty">
+      <created>1591622344027</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1591622344028</updated>
+    </task>
+    <task id="LOCAL-00013" summary="chanced pictures to PNG for better qualaty">
+      <created>1591622357657</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1591622357657</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -269,28 +250,33 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lamp detection full" />
     <MESSAGE value="added new pictures" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new pictures" />
+    <MESSAGE value="chanced pictures to PNG for better qualaty" />
+    <option name="LAST_COMMIT_MESSAGE" value="chanced pictures to PNG for better qualaty" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="295" key="GridCell.Tab.0.bottom" timestamp="1591622284080">
+    <state x="-1180" y="295" key="FileChooserDialogImpl" timestamp="1591623012805">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591622284080" />
+    <state x="-1180" y="295" key="FileChooserDialogImpl/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591623012805" />
+    <state width="1899" height="295" key="GridCell.Tab.0.bottom" timestamp="1591623224323">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591623224323" />
     <state width="1899" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531279" />
-    <state width="1899" height="295" key="GridCell.Tab.0.center" timestamp="1591622284079">
+    <state width="1899" height="295" key="GridCell.Tab.0.center" timestamp="1591623224323">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591622284079" />
+    <state width="1899" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591623224323" />
     <state width="1899" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531278" />
-    <state width="1899" height="295" key="GridCell.Tab.0.left" timestamp="1591622284079">
+    <state width="1899" height="295" key="GridCell.Tab.0.left" timestamp="1591623224323">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591622284079" />
+    <state width="1899" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591623224323" />
     <state width="1899" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531278" />
-    <state width="1899" height="295" key="GridCell.Tab.0.right" timestamp="1591622284080">
+    <state width="1899" height="295" key="GridCell.Tab.0.right" timestamp="1591623224323">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591622284080" />
+    <state width="1899" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591623224323" />
     <state width="1899" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531278" />
     <state width="1899" height="363" key="GridCell.Tab.1.bottom" timestamp="1591363508598">
       <screen x="-1920" y="0" width="1920" height="1080" />
@@ -308,9 +294,9 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1899" height="363" key="GridCell.Tab.1.right/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591363508598" />
-    <state x="-1151" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591349369394">
+    <state x="-1151" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591622313689">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1151" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591349369394" />
+    <state x="-1151" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591622313689" />
   </component>
 </project>
