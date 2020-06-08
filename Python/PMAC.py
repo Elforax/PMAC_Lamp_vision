@@ -27,9 +27,14 @@ def get_contours(img, edge, rangeMin, rangeMax):
         # print(area)
         cv2.drawContours(img, contours[i], -1, (0, 0, 255), 2)
 
+        max_area = 0
+        biggest = []
         if rangeMin < area < rangeMax:
             cv2.fillPoly(mask, pts=[contours[i]], color=(255, 255, 255))
             offset = 10
+            if area > max_area:
+                max_area = area
+                biggest = contours[i]
             x, y, w, h = cv2.boundingRect(contours[i])
             # cv2.rectangle(img, (x-offset, y-offset), (x + w + offset, y + h + offset), (0, 255, 0), 2)
     kernel = np.ones([7, 7], np.uint8)
@@ -37,7 +42,7 @@ def get_contours(img, edge, rangeMin, rangeMax):
     mask = cv2.erode(mask, kernel, iterations=5)
     mask = cv2.dilate(mask, kernel, iterations=2)
 
-    return mask
+    return mask, biggest
 
 
 def image_paths(path, file_type="jpg"):    # points to a folder and takes all the images in it.

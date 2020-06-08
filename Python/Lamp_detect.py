@@ -16,6 +16,8 @@ def find_lamp(image, thhold=None, thcanny=None, k=(9, 9), stk_scale=0.5):
     if thhold is None:
         thhold = [20000, 270000]
 
+    width, height = image.shape[:2]
+
     grey = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)                      # makes a grayscale version of the input
     blur = cv2.GaussianBlur(grey, k, 2.0, 2.0)                          # blurs the grayscale to reduce noise
     edge = cv2.Canny(blur, thcanny[0], thcanny[1],)                      # detects edges of the blurred image
@@ -24,26 +26,30 @@ def find_lamp(image, thhold=None, thcanny=None, k=(9, 9), stk_scale=0.5):
 
     thicc = cv2.dilate(edge, kernel, iterations=4)                                    # dilates the edges
 
-    mask = get_contours(blur, thicc, thhold[0], thhold[1])              # creates a mask of the filled contour
+    mask, bound = get_contours(blur, thicc, thhold[0], thhold[1])              # creates a mask of the filled contour
 
     # creates blank images to fill
     pixels = pixel_count(mask)
     _lamp = np.zeros_like(blur)
     _result_image = np.zeros_like(image)
     mask2 = np.zeros_like(image)
+    result_chop = np.zeros_like(image)
     _area = 0
 
     # if lamp is found preform this
     if pixels > 70000:
         _lamp = cv2.bitwise_and(blur, mask)                         # mask blur image for second check
-        mask2 = get_contours(image, _lamp, thhold[0], thhold[1])    # second contour check to find the real lamp
+        mask2, bound_max = get_contours(image, _lamp, thhold[0], thhold[1])    # second contour check to find the real lamp
         _result_image = cv2.bitwise_and(image, mask2)               # mask the result over the input image
         if _result_image.any():
-            _area = pixel_count(_result_image)
+            x, y, w, h = cv2.boundingRect(bound_max)
+            result_chop = _result_image[y:y + h, x:x + w]
+            result_chop = cv2.resize(result_chop ,(height, width))
+            _area = pixel_count(result_chop)
 
     _stack = stack_images(stk_scale, [[image, edge], [_lamp, mask2]])   # create a image of multiple images
 
-    return _result_image, _area, _stack
+    return result_chop, _area, _stack
 
 
 if __name__ == "__main__":
