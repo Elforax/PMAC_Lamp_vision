@@ -22,6 +22,38 @@
     <list default="true" id="28b2a66d-4d5d-4721-8f26-78bc2cd11fa5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Python/Dirty_detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Dirty_detect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0057.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0058.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0059.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0060.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0062.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0064.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0065.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0066.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0067.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0068.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0069.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0070.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0071.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0072.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0073.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0074.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0075.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0076.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0077.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0082.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0083.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0084.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0085.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/IMG_0086.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/light dirty 1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty/light dirty.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/dirty_alt/IMG_0090.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/ref/light 0% coverd.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/ref/light 100% coverd.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/ref_alt/IMG_0088.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/pictures/ref_alt/IMG_0089.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/test_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/test_image.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,18 +90,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Users\jopte\Documents\GitHub\PMAC_Lamp_vision\Python\pictures\dirty" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.Dirty_detect">
     <configuration name="Dirty_detect" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -239,13 +259,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lamp detection full" />
@@ -253,25 +272,25 @@
     <option name="LAST_COMMIT_MESSAGE" value="added new pictures" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="363" key="GridCell.Tab.0.bottom" timestamp="1591363508597">
+    <state width="1899" height="295" key="GridCell.Tab.0.bottom" timestamp="1591622284080">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="363" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591363508597" />
+    <state width="1899" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591622284080" />
     <state width="1899" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531279" />
-    <state width="1899" height="363" key="GridCell.Tab.0.center" timestamp="1591363508597">
+    <state width="1899" height="295" key="GridCell.Tab.0.center" timestamp="1591622284079">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="363" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591363508597" />
+    <state width="1899" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591622284079" />
     <state width="1899" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531278" />
-    <state width="1899" height="363" key="GridCell.Tab.0.left" timestamp="1591363508597">
+    <state width="1899" height="295" key="GridCell.Tab.0.left" timestamp="1591622284079">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="363" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591363508597" />
+    <state width="1899" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591622284079" />
     <state width="1899" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531278" />
-    <state width="1899" height="363" key="GridCell.Tab.0.right" timestamp="1591363508597">
+    <state width="1899" height="295" key="GridCell.Tab.0.right" timestamp="1591622284080">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="363" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591363508597" />
+    <state width="1899" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591622284080" />
     <state width="1899" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531278" />
     <state width="1899" height="363" key="GridCell.Tab.1.bottom" timestamp="1591363508598">
       <screen x="-1920" y="0" width="1920" height="1080" />

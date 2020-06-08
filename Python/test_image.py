@@ -8,29 +8,30 @@ import sys
 from PMAC import scale_img, image_paths
 
 print("You are using OpenCV version " + cv2.__version__ + ".")
+scale = .4
 
 #debug config
 debug_clean = 0
-debug_dirty = 1
+debug_dirty = 0
 debug_clean_alt = 0
-debug_dirty_alt = 1
+debug_dirty_alt = 0
 
 #run debug
 clean = 1
 dirty = 1
-clean_alt = 1
-dirty_alt = 1
+clean_alt = 0
+dirty_alt = 0
 
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-    paths_ref, names_ref = image_paths("pictures/ref")
+    paths_ref, names_ref = image_paths("pictures/ref", "PNG")
     print(paths_ref, names_ref)
-    paths, names = image_paths("pictures/dirty")
+    paths, names = image_paths("pictures/dirty", "PNG")
     print(paths, names)
-    paths_ref_alt, names_ref_alt = image_paths("pictures/ref_alt")
+    paths_ref_alt, names_ref_alt = image_paths("pictures/ref_alt", "PNG")
     print(paths_ref_alt, names_ref_alt)
-    paths_alt, names_alt = image_paths("pictures/dirty_alt")
+    paths_alt, names_alt = image_paths("pictures/dirty_alt", "PNG")
     print(paths_alt, names_alt)
 
 #refrance data
@@ -38,7 +39,7 @@ if __name__ == "__main__":
         images_ref = []
         for i in range(0, len(paths_ref), 1):
             input_img_ref = cv2.imread(paths_ref[i])
-            input_img_ref = scale_img(input_img_ref, 0.2)
+            input_img_ref = scale_img(input_img_ref, scale)
             images_ref.append(input_img_ref)
 
         hsv_image = cv2.cvtColor(images_ref[1], cv2.COLOR_BGR2HSV)
@@ -61,17 +62,17 @@ if __name__ == "__main__":
         images_ref_alt = []
         for i in range(0, len(paths_ref), 1):
             input_img_ref_alt = cv2.imread(paths_ref_alt[i])
-            input_img_ref_alt = scale_img(input_img_ref_alt, 0.2)
+            input_img_ref_alt = scale_img(input_img_ref_alt, scale)
             images_ref_alt.append(input_img_ref_alt)
 
-        hsv_image_alt = cv2.cvtColor(images_ref_alt[0], cv2.COLOR_BGR2HSV)
+        hsv_image_alt = cv2.cvtColor(images_ref_alt[1], cv2.COLOR_BGR2HSV)
 
         lowerb_c_alt = np.array([60, 50, 50])
         upperb_c_alt = np.array([61, 255, 255])
         mask_clean_alt = cv2.inRange(hsv_image_alt, lowerb_c_alt, upperb_c_alt)
         opp_total_alt = cv2.countNonZero(mask_clean_alt)
 
-        lamp_only_clean_alt = cv2.bitwise_and(images_ref_alt[1], images_ref_alt[1], mask= mask_clean_alt)
+        lamp_only_clean_alt = cv2.bitwise_and(images_ref_alt[0], images_ref_alt[0], mask= mask_clean_alt)
 
         if debug_clean_alt:
             print(opp_total_alt)
@@ -85,7 +86,7 @@ if __name__ == "__main__":
         images = []
         for i in range(0, len(paths), 1):
             input_img = cv2.imread(paths[i])
-            input_img = scale_img(input_img, 0.2)
+            input_img = scale_img(input_img, scale)
             images.append(input_img)
 
             lamp_only_dirty = cv2.bitwise_and(images[i], images[i], mask= mask_clean)
@@ -114,7 +115,7 @@ if __name__ == "__main__":
         images_alt = []
         for i in range(0, len(paths_alt), 1):
             input_img_alt = cv2.imread(paths_alt[i])
-            input_img_alt = scale_img(input_img_alt, 0.2)
+            input_img_alt = scale_img(input_img_alt, scale)
             images_alt.append(input_img_alt)
 
             lamp_only_dirty_alt = cv2.bitwise_and(images_alt[i], images_alt[i], mask=mask_clean_alt)

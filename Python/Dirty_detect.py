@@ -8,8 +8,8 @@ print(__name__)
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.path.abspath(__file__)))  # sets dir to current dir
 
-    paths, names = image_paths("pictures/dirty")  # gets all image paths and names
-    paths2, names2 = image_paths("pictures/dirty_alt")
+    paths, names = image_paths("pictures/dirty", "PNG")  # gets all image paths and names
+    paths2, names2 = image_paths("pictures/dirty_alt", "PNG")
     for path in paths2:
         paths.append(path)  # appends one list to the other
 
