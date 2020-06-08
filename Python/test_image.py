@@ -11,9 +11,9 @@ print("You are using OpenCV version " + cv2.__version__ + ".")
 
 #debug config
 debug_clean = 0
-debug_dirty = 0
+debug_dirty = 1
 debug_clean_alt = 0
-debug_dirty_alt = 0
+debug_dirty_alt = 1
 
 #run debug
 clean = 1
@@ -137,4 +137,4 @@ if __name__ == "__main__":
                 cv2.imshow("lamp only dirty", lamp_only_dirty_alt)
                 cv2.imshow("mask dirt", mask_dirt_alt)
 
-    cv2.waitKey(0)
+cv2.waitKey(0)
