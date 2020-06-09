@@ -8,7 +8,7 @@ import sys
 from PMAC import scale_img, image_paths
 
 print("You are using OpenCV version " + cv2.__version__ + ".")
-scale = .4
+scale = .2
 
 #debug config
 debug_clean = 0
