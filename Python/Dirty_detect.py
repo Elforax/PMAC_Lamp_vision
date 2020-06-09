@@ -4,6 +4,8 @@ import numpy as np
 import cv2
 from Python.Lamp_detect import find_lamp
 from Python.PMAC import *
+import time
+
 print(__name__)
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.path.abspath(__file__)))  # sets dir to current dir
@@ -21,6 +23,7 @@ if __name__ == "__main__":
     results = []
     index = 0
     for path in paths:
+        start = time.time()
         image = cv2.imread(path)
         image = scale_img(image, 0.2)
         print("New lamp")
@@ -93,7 +96,9 @@ if __name__ == "__main__":
         print(str(names[index]),": ",dirtiness, "%")
         stack = stack_images(0.4, [[result, gray, hsv], [dirtiness_results, dirty_zone, inv_mask_hsv], [noise, invert, mask_led_border],[noise_mask, invert_edge_dilate, inv_mask_leds]])
         cv2.imshow("Results", stack)
-
+        end = time.time()
+        elapsed = round((end-start), 2)
+        print("Time: ", elapsed, " seconds")
         cv2.waitKey(0)
         index += 1
     cv2.destroyAllWindows()
