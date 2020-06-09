@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b2a66d-4d5d-4721-8f26-78bc2cd11fa5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/Dirty_detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Dirty_detect.py" afterDir="false" />
-    </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="28b2a66d-4d5d-4721-8f26-78bc2cd11fa5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,9 +41,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MincedraftPyBookwriter" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Python/pictures/dirty" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -59,19 +56,7 @@
       <recent name="D:\Users\jopte\Documents\GitHub\PMAC_Lamp_vision\Python\pictures\dirty" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.Dirty_detect">
+  <component name="RunManager" selected="Python.test_image">
     <configuration name="Dirty_detect" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PMAC_Lamp_vision" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -79,9 +64,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\luteg\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/Dirty_detect.py" />
@@ -121,9 +106,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\luteg\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/test_image.py" />
@@ -137,8 +122,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Dirty_detect" />
         <item itemvalue="Python.test_image" />
+        <item itemvalue="Python.Dirty_detect" />
         <item itemvalue="Python.Lamp_detect" />
       </list>
     </recent_temporary>
@@ -231,14 +216,7 @@
       <option name="project" value="LOCAL" />
       <updated>1591350722205</updated>
     </task>
-    <task id="LOCAL-00012" summary="added new pictures">
-      <created>1591385104880</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1591385104880</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,13 +224,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lamp detection full" />
@@ -260,26 +237,54 @@
     <option name="LAST_COMMIT_MESSAGE" value="added new pictures" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="295" key="GridCell.Tab.0.bottom" timestamp="1591362361816">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state x="489" y="0" key="#Dirty_detect" timestamp="1591622812075">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591362361816" />
+    <state x="489" y="0" key="#Dirty_detect/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591622812075" />
+    <state x="489" y="0" key="#test_image" timestamp="1591622882908">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="489" y="0" key="#test_image/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591622882908" />
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1591708050554">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591708050554" />
+    <state width="1899" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591622284080" />
     <state width="1899" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531279" />
-    <state width="1899" height="295" key="GridCell.Tab.0.center" timestamp="1591362361816">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1591708050554">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591362361816" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591708050554" />
+    <state width="1899" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591622284079" />
     <state width="1899" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531278" />
-    <state width="1899" height="295" key="GridCell.Tab.0.left" timestamp="1591362361815">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1591708050554">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591362361815" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591708050554" />
+    <state width="1899" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591622284079" />
     <state width="1899" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531278" />
-    <state width="1899" height="295" key="GridCell.Tab.0.right" timestamp="1591362361816">
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1591708050554">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591708050554" />
+    <state width="1899" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591622284080" />
+    <state width="1899" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531278" />
+    <state width="1899" height="363" key="GridCell.Tab.1.bottom" timestamp="1591363508598">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591362361816" />
-    <state width="1899" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@0.0.1920.1080" timestamp="1591186531278" />
+    <state width="1899" height="363" key="GridCell.Tab.1.bottom/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591363508598" />
+    <state width="1899" height="363" key="GridCell.Tab.1.center" timestamp="1591363508598">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="363" key="GridCell.Tab.1.center/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591363508598" />
+    <state width="1899" height="363" key="GridCell.Tab.1.left" timestamp="1591363508598">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="363" key="GridCell.Tab.1.left/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591363508598" />
+    <state width="1899" height="363" key="GridCell.Tab.1.right" timestamp="1591363508598">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="363" key="GridCell.Tab.1.right/0.0.1920.1080/-1920.0.1920.1080/-3840.0.1920.1080@-1920.0.1920.1080" timestamp="1591363508598" />
     <state x="-1151" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591349369394">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
