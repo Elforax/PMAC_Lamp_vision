@@ -17,10 +17,10 @@ debug_clean_alt = 0
 debug_dirty_alt = 0
 
 #run debug
-clean = 1
-dirty = 1
-clean_alt = 0
-dirty_alt = 0
+clean = 0
+dirty = 0
+clean_alt = 1
+dirty_alt = 1
 
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -65,14 +65,14 @@ if __name__ == "__main__":
             input_img_ref_alt = scale_img(input_img_ref_alt, scale)
             images_ref_alt.append(input_img_ref_alt)
 
-        hsv_image_alt = cv2.cvtColor(images_ref_alt[1], cv2.COLOR_BGR2HSV)
+        hsv_image_alt = cv2.cvtColor(images_ref_alt[0], cv2.COLOR_BGR2HSV)
 
         lowerb_c_alt = np.array([60, 50, 50])
         upperb_c_alt = np.array([61, 255, 255])
         mask_clean_alt = cv2.inRange(hsv_image_alt, lowerb_c_alt, upperb_c_alt)
         opp_total_alt = cv2.countNonZero(mask_clean_alt)
 
-        lamp_only_clean_alt = cv2.bitwise_and(images_ref_alt[0], images_ref_alt[0], mask= mask_clean_alt)
+        lamp_only_clean_alt = cv2.bitwise_and(images_ref_alt[1], images_ref_alt[1], mask= mask_clean_alt)
 
         if debug_clean_alt:
             print(opp_total_alt)
@@ -104,6 +104,7 @@ if __name__ == "__main__":
 
             if debug_dirty:
                 print(opp_dirt)
+                cv2.imshow("dirt only", dirt_only)
                 cv2.imshow("hsv dirt", hsv_dirt)
                 cv2.imshow("lamp only dirty", lamp_only_dirty)
                 cv2.imshow("mask dirt", mask_dirt)
@@ -133,6 +134,7 @@ if __name__ == "__main__":
 
             if debug_dirty_alt:
                 print(opp_dirt_alt)
+                cv2.imshow("dirt only", dirt_only_alt)
                 cv2.imshow("hsv dirt", hsv_dirt_alt)
                 cv2.imshow("Lamp only clean", lamp_only_clean_alt)
                 cv2.imshow("lamp only dirty", lamp_only_dirty_alt)
