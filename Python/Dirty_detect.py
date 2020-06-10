@@ -34,6 +34,7 @@ if __name__ == "__main__":
         print("New lamp")
         result, area, _process = find_lamp(image)
         if area == 0:
+            index += 1
             continue
         gray = cv2.cvtColor(result, cv2.COLOR_BGR2GRAY)
         hsv = cv2.cvtColor(result, cv2.COLOR_BGR2HSV)
