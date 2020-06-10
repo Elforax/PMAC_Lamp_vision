@@ -22,6 +22,11 @@ if __name__ == "__main__":
     # processing here #
     results = []
     index = 0
+
+    total_time = 0
+    max_time = 0
+    min_time = 0
+    result_counter = 0
     for path in paths:
         start = time.time()
         image = cv2.imread(path)
@@ -94,11 +99,35 @@ if __name__ == "__main__":
 
         print(area, dirty_pixels)
         print(str(names[index]),": ",dirtiness, "%")
+        if dirtiness > 20:
+            print("Lamp is dirty needs cleaning")
+        if dirtiness < 10:
+            print("Lamp is clean no need to clean")
+
+        result_counter += 1
+
         stack = stack_images(0.4, [[result, gray, hsv], [dirtiness_results, dirty_zone, inv_mask_hsv], [noise, invert, mask_led_border],[noise_mask, invert_edge_dilate, inv_mask_leds]])
         cv2.imshow("Results", stack)
         end = time.time()
         elapsed = round((end-start), 2)
+        if total_time == 0:
+            min_time = elapsed
+        if elapsed < min_time:
+            min_time = elapsed
+
+        if elapsed > max_time:
+            max_time = elapsed
+
+        total_time += elapsed
+
+
+
         print("Time: ", elapsed, " seconds")
-        cv2.waitKey(0)
+        cv2.waitKey(10)
         index += 1
+
+    print("Avg Time: ", total_time/result_counter, " seconds")
+    print("Max Time: ", max_time, " seconds")
+    print("Min Time: ", min_time, " seconds")
+    cv2.waitKey(0)
     cv2.destroyAllWindows()
