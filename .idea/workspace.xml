@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b2a66d-4d5d-4721-8f26-78bc2cd11fa5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/Dirty_detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Dirty_detect.py" afterDir="false" />
-    </list>
+    <list default="true" id="28b2a66d-4d5d-4721-8f26-78bc2cd11fa5" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +119,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\luteg\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\Justin gort\AppData\Local\Programs\Python\Python37\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -143,8 +140,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Dirty_detect" />
         <item itemvalue="Python.test_image" />
+        <item itemvalue="Python.Dirty_detect" />
         <item itemvalue="Python.Lamp_detect" />
       </list>
     </recent_temporary>
