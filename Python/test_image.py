@@ -11,8 +11,8 @@ print("You are using OpenCV version " + cv2.__version__ + ".")
 scale = .2
 
 #debug config
-debug_clean = 1
-debug_dirty = 1
+debug_clean = 0
+debug_dirty = 0
 debug_clean_alt = 0
 debug_dirty_alt = 0
 
