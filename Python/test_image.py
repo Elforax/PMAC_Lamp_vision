@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 import os
-import sys
+from Python.Lamp_detect import find_lamp
 
 # PMAC is een lib waar functies instaan die voor alle test scripts gebruikt kunnen worden
 # import de gene die je nodig hebt
@@ -17,8 +17,8 @@ debug_clean_alt = 0
 debug_dirty_alt = 0
 
 #run debug
-clean = 0
-dirty = 0
+clean = 1
+dirty = 1
 clean_alt = 1
 dirty_alt = 1
 
@@ -99,15 +99,22 @@ if __name__ == "__main__":
             mask_dirt = cv2.inRange(hsv_dirt, lowerb_d, lowerb_d)
             mask_dirt = cv2.bitwise_not(mask_dirt)
             opp_dirt = cv2.countNonZero(mask_dirt)
+            _, area, _ = find_lamp(images[i])
+            if area == 0:
+                area = 1
+            percentage = opp_dirt / opp_total * 100
+            percentage_comp = (opp_total / area) * percentage
 
-            print(names[i], opp_dirt/opp_total*100)
+            print(names[i], percentage, percentage_comp)
 
             if debug_dirty:
-                print(opp_dirt)
+                print("opp_dirt", opp_dirt)
+                print("opp_total", opp_total)
                 cv2.imshow("dirt only", dirt_only)
                 cv2.imshow("hsv dirt", hsv_dirt)
                 cv2.imshow("lamp only dirty", lamp_only_dirty)
                 cv2.imshow("mask dirt", mask_dirt)
+                cv2.waitKey(0)
 
 
 #dirty data alt
@@ -129,15 +136,23 @@ if __name__ == "__main__":
             mask_dirt_alt = cv2.inRange(hsv_dirt_alt, lowerb_d_alt, lowerb_d_alt)
             mask_dirt_alt = cv2.bitwise_not(mask_dirt_alt)
             opp_dirt_alt = cv2.countNonZero(mask_dirt_alt)
+            _, area, _ = find_lamp(images_alt[i])
+            if area == 0:
+                area = 1
 
-            print(names_alt[i], opp_dirt_alt / opp_total_alt * 100)
+            percentage = opp_dirt_alt / opp_total_alt * 100
+            percentage_comp = (opp_total_alt / area) * percentage
+
+            print(names_alt[i], percentage , percentage_comp)
 
             if debug_dirty_alt:
-                print(opp_dirt_alt)
+                print("opp_dirt_alt", opp_dirt_alt)
+                print("opp_total_alt", opp_total_alt)
                 cv2.imshow("dirt only", dirt_only_alt)
                 cv2.imshow("hsv dirt", hsv_dirt_alt)
                 cv2.imshow("Lamp only clean", lamp_only_clean_alt)
                 cv2.imshow("lamp only dirty", lamp_only_dirty_alt)
                 cv2.imshow("mask dirt", mask_dirt_alt)
+                cv2.waitKey(0)
 
 cv2.waitKey(0)
