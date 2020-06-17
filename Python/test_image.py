@@ -54,6 +54,8 @@ if __name__ == "__main__":
 
         if debug_clean:
             print(opp_total)
+            cv2.imshow("lamp clean colort", images_ref[1])
+            cv2.imshow("lamp clean", images_ref[0])
             cv2.imshow("mask clean", mask_clean)
             cv2.imshow("lamp only clean", lamp_only_clean)
 
@@ -113,6 +115,8 @@ if __name__ == "__main__":
             if debug_dirty:
                 print("opp_dirt", opp_dirt)
                 print("opp_total", opp_total)
+                cv2.imshow("dirty image", images[i])
+                cv2.imshow("dirty image", images[i])
                 cv2.imshow("dirt only", dirt_only)
                 cv2.imshow("hsv dirt", hsv_dirt)
                 cv2.imshow("lamp only dirty", lamp_only_dirty)
