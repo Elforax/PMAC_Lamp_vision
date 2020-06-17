@@ -21,8 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="28b2a66d-4d5d-4721-8f26-78bc2cd11fa5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/LED_detect.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/PMAC.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/PMAC.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Lamp_detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lamp_detect.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -251,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591792920090</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added new pictures">
+      <created>1592397158936</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1592397158936</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -20,13 +20,13 @@ def find_lamp(image, thhold=None, thcanny=None, k=(9, 9), stk_scale=0.5):
 
     grey = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)                      # makes a grayscale version of the input
     blur = cv2.GaussianBlur(grey, k, 2.0, 2.0)                          # blurs the grayscale to reduce noise
-    edge = cv2.Canny(blur, thcanny[0], thcanny[1],)                      # detects edges of the blurred image
+    edge = cv2.Canny(blur, thcanny[0], thcanny[1],)                     # detects edges of the blurred image
 
     kernel = np.array([[0, 1, 0], [1, 1, 1], [0, 1, 0]], np.uint8)      # creates a star kernel
 
-    thicc = cv2.dilate(edge, kernel, iterations=4)                                    # dilates the edges
+    thicc = cv2.dilate(edge, kernel, iterations=4)                      # dilates the edges
 
-    mask, bound = get_contours(blur, thicc, thhold[0], thhold[1])              # creates a mask of the filled contour
+    mask, bound = get_contours(blur, thicc, thhold[0], thhold[1])       # creates a mask of the filled contour
 
     # creates blank images to fill
     pixels = pixel_count(mask)
@@ -38,9 +38,9 @@ def find_lamp(image, thhold=None, thcanny=None, k=(9, 9), stk_scale=0.5):
 
     # if lamp is found preform this
     if pixels > 70000:
-        _lamp = cv2.bitwise_and(blur, mask)                         # mask blur image for second check
+        _lamp = cv2.bitwise_and(blur, mask)                             # mask blur image for second check
         mask2, bound_max = get_contours(image, _lamp, thhold[0], thhold[1])    # second contour check to find the real lamp
-        _result_image = cv2.bitwise_and(image, mask2)               # mask the result over the input image
+        _result_image = cv2.bitwise_and(image, mask2)                   # mask the result over the input image
         if _result_image.any():
             x, y, w, h = cv2.boundingRect(bound_max)
             result_chop = _result_image[y:y + h, x:x + w]
@@ -53,12 +53,12 @@ def find_lamp(image, thhold=None, thcanny=None, k=(9, 9), stk_scale=0.5):
 
 
 if __name__ == "__main__":
-    os.chdir(os.path.dirname(os.path.abspath(__file__)))            # sets dir to current dir
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))                # sets dir to current dir
 
-    paths, names = image_paths("pictures/clean")                    # gets all image paths and names
+    paths, names = image_paths("pictures/clean")                        # gets all image paths and names
     paths2, names2 = image_paths("pictures/dirty")
     for path in paths2:
-        paths.append(path)                                           # appends one list to the other
+        paths.append(path)                                              # appends one list to the other
 
     print(paths)
 
