@@ -100,10 +100,12 @@ if __name__ == "__main__":
 
         print(area, dirty_pixels)
         print(str(names[index]),": ",dirtiness, "%")
-        if dirtiness > 20:
+        if dirtiness >= 20:
             print("Lamp is dirty needs cleaning")
-        if dirtiness < 10:
+        if dirtiness <= 10:
             print("Lamp is clean no need to clean")
+        if 20 > dirtiness > 10:
+            print("Lamp is no clean but no need to clean yet")
 
         result_counter += 1
 

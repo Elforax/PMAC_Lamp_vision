@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b2a66d-4d5d-4721-8f26-78bc2cd11fa5" name="Default Changelist" comment="" />
+    <list default="true" id="28b2a66d-4d5d-4721-8f26-78bc2cd11fa5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Dirty_detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Dirty_detect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/test_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/test_image.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +73,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Dirty_detect">
+  <component name="RunManager" selected="Python.test_image">
     <configuration name="Dirty_detect" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PMAC_Lamp_vision" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -257,6 +261,12 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="COLUMN_WIDTH">
+                <map>
+                  <entry key="2" value="80" />
+                  <entry key="3" value="87" />
+                </map>
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>

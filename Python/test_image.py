@@ -18,9 +18,9 @@ debug_dirty_alt = 0
 
 #run debug
 clean = 1
-dirty = 1
+dirty = 0
 clean_alt = 1
-dirty_alt = 1
+dirty_alt = 0
 
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -50,6 +50,7 @@ if __name__ == "__main__":
         opp_total = cv2.countNonZero(mask_clean)
 
         lamp_only_clean = cv2.bitwise_and(images_ref[0], images_ref[0], mask= mask_clean)
+        print("Lamp schoon.jpg", 0.00)
 
         if debug_clean:
             print(opp_total)
@@ -73,6 +74,8 @@ if __name__ == "__main__":
         opp_total_alt = cv2.countNonZero(mask_clean_alt)
 
         lamp_only_clean_alt = cv2.bitwise_and(images_ref_alt[1], images_ref_alt[1], mask= mask_clean_alt)
+
+        print("Lamp schoon alt.jpg", 0.00)
 
         if debug_clean_alt:
             print(opp_total_alt)
@@ -105,7 +108,7 @@ if __name__ == "__main__":
             percentage = opp_dirt / opp_total * 100
             percentage_comp = (opp_total / area) * percentage
 
-            print(names[i], percentage, percentage_comp)
+            print(names[i], percentage_comp)
 
             if debug_dirty:
                 print("opp_dirt", opp_dirt)
@@ -143,7 +146,7 @@ if __name__ == "__main__":
             percentage = opp_dirt_alt / opp_total_alt * 100
             percentage_comp = (opp_total_alt / area) * percentage
 
-            print(names_alt[i], percentage , percentage_comp)
+            print(names_alt[i], percentage_comp)
 
             if debug_dirty_alt:
                 print("opp_dirt_alt", opp_dirt_alt)
